@@ -1,0 +1,358 @@
+.form-style input {
+  border: 0;
+  height: 50px;
+  border-radius: 0;
+  border-bottom: 1px solid #ebebeb;
+}
+.form-style input:focus {
+  border-bottom: 1px solid #007bff;
+  box-shadow: none;
+  outline: 0;
+  background-color: #ebebeb;
+}
+.sideline {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ccc;
+}
+button {
+  height: 50px;
+}
+.sideline:before,
+.sideline:after {
+  content: "";
+  border-top: 1px solid #ebebeb;
+  margin: 0 20px 0 0;
+  flex: 1 0 20px;
+}
+
+.sideline:after {
+  margin: 0 0 0 20px;
+}
+
+/* ...........................tabble css.......... */
+.search-div {
+  text-align: end;
+  margin-bottom: 8px;
+}
+
+h1 {
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  /* margin-bottom: 15px; */
+  background-color: rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+}
+table {
+  width: 100%;
+  table-layout: auto;
+}
+
+.tbl-header {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 100%;
+}
+.tbl-content {
+  height: 300px;
+  overflow-x: auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+th {
+  padding: 5px;
+  text-align: center !important;
+  font-weight: 700;
+  font-size: 20px;
+  color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 5px;
+}
+td {
+  /* padding:5px; */
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 600;
+  font-size: 15px;
+  color: #0d0a0a;
+  border-bottom: solid 2px rgba(58, 57, 57, 0.2) !important;
+}
+
+table tr:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn-edit {
+  background-color: blue;
+  border-radius: 5px;
+  margin: 5px;
+}
+.btn-edit a {
+  color: white;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.btn-dlt {
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* demo styles */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+body {
+  /* background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+    background: linear-gradient(to right, #25c481, #25b7c4); */
+  background-color: rgb(224, 213, 224);
+  font-family: "Roboto", sans-serif;
+}
+section {
+  margin: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .tbl-header {
+    height: auto; /* Allow the table content to expand */
+    overflow-y: scroll; /* Add vertical scrollbar */
+    overflow-x: auto;
+  }
+}
+
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/* ........................edit form css........................ */
+
+.card-img-left {
+  width: 45%;
+  /* Link to your background image using in the property below! */
+  background: scroll center
+    url("https://source.unsplash.com/WEQbe2jBg40/414x512");
+  background-size: cover;
+}
+
+.btn-login {
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
+}
+
+.btn-google {
+  color: white !important;
+  background-color: #ea4335;
+}
+
+.btn-facebook {
+  color: white !important;
+  background-color: #3b5998;
+}
+
+/* ..............Login form css.......... */
+body {
+  font: 600 16px/18px "Open Sans", sans-serif;
+  color: #6a6f8c;
+  background: #c8c8c8;
+}
+
+.login-box {
+  width: 100%;
+  margin: auto;
+  max-width: 525px;
+  min-height: 670px;
+  position: relative;
+  background: url(https://images.unsplash.com/photo-1507208773393-40d9fc670acf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80)
+    no-repeat center;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.login-snip {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 90px 70px 50px 70px;
+  background: rgba(0, 77, 77, 0.9);
+}
+.login-snip .login,
+.login-snip .sign-up-form {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  transition: all 0.4s linear;
+}
+.login-snip .sign-in,
+.login-snip .sign-up,
+.login-space .group .check {
+  display: none;
+}
+.login-snip .tab,
+.login-space .group .label,
+.login-space .group .button {
+  text-transform: uppercase;
+}
+.login-snip .tab {
+  font-size: 22px;
+  margin-right: 15px;
+  padding-bottom: 5px;
+  margin: 0 15px 10px 0;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+}
+.login-snip .sign-in:checked + .tab,
+.login-snip .sign-up:checked + .tab {
+  color: #fff;
+  border-color: #1161ee;
+}
+.login-space {
+  min-height: 345px;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+.login-space .group {
+  margin-bottom: 15px;
+}
+.login-space .group .label,
+.login-space .group .input,
+.login-space .group .button {
+  width: 100%;
+  color: #fff;
+  display: block;
+}
+.login-space .group .input,
+.login-space .group .button {
+  border: none;
+  padding: 15px 20px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.login-space .group input[data-type="password"] {
+  /* text-security:circle; */
+  -webkit-text-security: circle;
+}
+.login-space .group .label {
+  color: #aaa;
+  font-size: 12px;
+}
+.login-space .group .button {
+  background: #1161ee;
+}
+.login-space .group label .icon {
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  position: relative;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+}
+.login-space .group label .icon:before,
+.login-space .group label .icon:after {
+  content: "";
+  width: 10px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  transition: all 0.2s ease-in-out 0s;
+}
+.login-space .group label .icon:before {
+  left: 3px;
+  width: 5px;
+  bottom: 6px;
+  transform: scale(0) rotate(0);
+}
+.login-space .group label .icon:after {
+  top: 6px;
+  right: 0;
+  transform: scale(0) rotate(0);
+}
+.login-space .group .check:checked + label {
+  color: #fff;
+}
+.login-space .group .check:checked + label .icon {
+  background: #1161ee;
+}
+.login-space .group .check:checked + label .icon:before {
+  transform: scale(1) rotate(45deg);
+}
+.login-space .group .check:checked + label .icon:after {
+  transform: scale(1) rotate(-45deg);
+}
+.login-snip .sign-in:checked + .tab + .sign-up + .tab + .login-space .login {
+  transform: rotate(0);
+}
+.login-snip .sign-up:checked + .tab + .login-space .sign-up-form {
+  transform: rotate(0);
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+.clearfix:after,
+.clearfix:before {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+  display: block;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hr {
+  height: 2px;
+  margin: 60px 0 50px 0;
+  background: rgba(255, 255, 255, 0.2);
+}
+.foot {
+  text-align: center;
+}
+.card {
+  width: 500px;
+  left: 100px;
+}
+
+::placeholder {
+  color: #b3b3b3;
+}
+
+.log-btn {
+  background-color: #c8c8c8;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+.log-btn a {
+  color: white;
+}
+.log-btn:hover {
+  background-color: #8a8787;
+  transition: 0.5s ease-in-out;
+}
+
