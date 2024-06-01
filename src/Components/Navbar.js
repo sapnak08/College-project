@@ -15,7 +15,7 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
           <Link
             to="/"
-            className="navbar-brand d-flex align-items-center px-4 px-lg-5"
+            className="navbar-brand d-flex align-items-center px-4 "
           >
             <h2 className="m-0 text-primary">
               <i className="fa  fa-graduation-cap text-primary " />
@@ -135,6 +135,7 @@ export default function Navbar() {
                 </div>
               </div>
               <button className="log-btn" onClick={handleLogout}><Link to="/logout">Logout({auth.firstName})</Link></button>
+              
               </>
             )}
               

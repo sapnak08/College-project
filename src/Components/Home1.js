@@ -1,43 +1,74 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import name from "./backgroundimg.jpg";
 
-export default function Home() {
+export default function Home1() {
   return (
     <div>
-      
+      {/* Navbar Start */}
+      <nav className="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a
+          href="index.html"
+          className="navbar-brand d-flex align-items-center px-4 px-lg-5"
+        >
+          <h2 className="m-0 text-primary">
+            <i className="fa fa-book me-3" />
+            eLEARNING
+          </h2>
+        </a>
+        <button
+          type="button"
+          className="navbar-toggler me-4"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span className="navbar-toggler-icon" />
+        </button>
+        <div className="collapse navbar-collapse" id="navbarCollapse">
+          <div className="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="index.html" className="nav-item nav-link active">
+              Home
+            </a>
+            <a href="about.html" className="nav-item nav-link">
+              About
+            </a>
+            <a href="courses.html" className="nav-item nav-link">
+              Courses
+            </a>
+            <div className="nav-item dropdown">
+              <a
+                href="#"
+                className="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+              >
+                Pages
+              </a>
+              <div className="dropdown-menu fade-down m-0">
+                <a href="team.html" className="dropdown-item">
+                  Our Team
+                </a>
+                <a href="testimonial.html" className="dropdown-item">
+                  Testimonial
+                </a>
+                <a href="404.html" className="dropdown-item">
+                  404 Page
+                </a>
+              </div>
+            </div>
+            <a href="contact.html" className="nav-item nav-link">
+              Contact
+            </a>
+          </div>
+          <a href className="btn btn-primary py-4 px-lg-5 d-none d-lg-block">
+            Join Now
+            <i className="fa fa-arrow-right ms-3" />
+          </a>
+        </div>
+      </nav>
+      {/* Navbar End */}
       {/* Carousel Start */}
-      <div
-        id="carouselExampleCaptions"
-        className="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div className="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to={0}
-            className="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          />
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to={1}
-            aria-label="Slide 2"
-          />
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to={2}
-            aria-label="Slide 3"
-          />
-        </div>
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img src="img/carousel-1.jpg" className="d-block w-100" alt="..." />
-            
+      <div className="container-fluid p-0 mb-5">
+        <div className="owl-carousel header-carousel position-relative">
+          <div className="owl-carousel-item position-relative">
+            <img className="img-fluid" src="img/carousel-1.jpg" alt />
             <div
               className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
               style={{ background: "rgba(24, 29, 56, .7)" }}
@@ -73,8 +104,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="carousel-item">
-            <img src="img/carousel-2.jpg" className="d-block w-100" alt="..." />
+          <div className="owl-carousel-item position-relative">
+            <img className="img-fluid" src="img/carousel-2.jpg" alt />
             <div
               className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
               style={{ background: "rgba(24, 29, 56, .7)" }}
@@ -110,142 +141,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="carousel-item">
-            <img src="img/carousel-1.jpg" className="d-block w-100" alt="..." />
-            <div
-              className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-              style={{ background: "rgba(24, 29, 56, .7)" }}
-            >
-              <div className="container">
-                <div className="row justify-content-start">
-                  <div className="col-sm-10 col-lg-8">
-                    <h5 className="text-primary text-uppercase mb-3 animated slideInDown">
-                      Best Online Courses
-                    </h5>
-                    <h1 className="display-3 text-white animated slideInDown">
-                      The Best Online Learning Platform
-                    </h1>
-                    <p className="fs-5 text-white mb-4 pb-2">
-                      Vero elitr justo clita lorem. Ipsum dolor at sed stet sit
-                      diam no. Kasd rebum ipsum et diam justo clita et kasd
-                      rebum sea sanctus eirmod elitr.
-                    </p>
-                    <a
-                      href
-                      className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
-                    >
-                      Read More
-                    </a>
-                    <a
-                      href
-                      className="btn btn-light py-md-3 px-md-5 animated slideInRight"
-                    >
-                      Join Now
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="prev"
-        >
-          <span className="carousel-control-prev-icon" aria-hidden="true" />
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="next"
-        >
-          <span className="carousel-control-next-icon" aria-hidden="true" />
-          <span className="visually-hidden">Next</span>
-        </button>
       </div>
-
-      {/* <div class="container-fluid p-0 mb-5">
-        <div class="owl-carousel header-carousel position-relative">
-          <div class="owl-carousel-item position-relative">
-            <img class="img-fluid" src="img/carousel-1.jpg" alt="" />
-            <div
-              class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-              style={{background: "rgba(24, 29, 56, 0.7)"}}
-            >
-              <div class="container">
-                <div class="row justify-content-start">
-                  <div class="col-sm-10 col-lg-8">
-                    <h5 class="text-primary text-uppercase mb-3 animated slideInDown">
-                      Best Online Courses
-                    </h5>
-                    <h1 class="display-3 text-white animated slideInDown">
-                      The Best Online Learning Platform
-                    </h1>
-                    <p class="fs-5 text-white mb-4 pb-2">
-                      Vero elitr justo clita lorem. Ipsum dolor at sed stet sit
-                      diam no. Kasd rebum ipsum et diam justo clita et kasd
-                      rebum sea sanctus eirmod elitr.
-                    </p>
-                    <a
-                      href=""
-                      class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
-                    >
-                      Read More
-                    </a>
-                    <a
-                      href=""
-                      class="btn btn-light py-md-3 px-md-5 animated slideInRight"
-                    >
-                      Join Now
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="owl-carousel-item position-relative">
-            <img class="img-fluid" src="img/carousel-2.jpg" alt="" />
-            <div
-              class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-              style={{background: "rgba(24, 29, 56,0.7)"}}
-            >
-              <div class="container">
-                <div class="row justify-content-start">
-                  <div class="col-sm-10 col-lg-8">
-                    <h5 class="text-primary text-uppercase mb-3 animated slideInDown">
-                      Best Online Courses
-                    </h5>
-                    <h1 class="display-3 text-white animated slideInDown">
-                      Get Educated Online From Your Home
-                    </h1>
-                    <p class="fs-5 text-white mb-4 pb-2">
-                      Vero elitr justo clita lorem. Ipsum dolor at sed stet sit
-                      diam no. Kasd rebum ipsum et diam justo clita et kasd
-                      rebum sea sanctus eirmod elitr.
-                    </p>
-                    <a
-                      href=""
-                      class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
-                    >
-                      Read More
-                    </a>
-                    <a
-                      href=""
-                      class="btn btn-light py-md-3 px-md-5 animated slideInRight"
-                    >
-                      Join Now
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
       {/* Carousel End */}
       {/* Service Start */}
       <div className="container-xxl py-5">
@@ -1021,10 +918,6 @@ export default function Home() {
         </div>
       </div>
       {/* Footer End */}
-      {/* Back to Top */}
-      <a href="#" className="btn btn-lg btn-primary btn-lg-square back-to-top">
-        <i className="bi bi-arrow-up" />
-      </a>
     </div>
   );
 }

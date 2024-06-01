@@ -4,7 +4,7 @@ import "../Project.css";
 
 export default function MarksheetPost() {
   const [marksheetData, setmarksheetData] = useState({
-    name: "",
+    Name: "",
     studentId: "",
     rollNo: "",
     physics: "",
@@ -13,13 +13,13 @@ export default function MarksheetPost() {
   });
   // console.log("user data", marksheetData);
 
-  const [error, setError] = useState("");
+  const [error, setError] = useState(false);
   const [message, setMessage] = useState("");
   const [msg, setMsg] = useState("");
 
   const handleReset = () => {
     setmarksheetData({
-      name: "",
+      Name: "",
       studentId: "",
       rollNo: "",
       physics: "",
@@ -36,9 +36,9 @@ export default function MarksheetPost() {
     axios
       .post("http://localhost:8888/marksheet", marksheetData)
       .then((response) => {
-        console.log("response", marksheetData.studentId);
+        console.log("response", response);
         if (
-          !marksheetData.name ||
+          !marksheetData.Name ||
           !marksheetData.studentId ||
           !marksheetData.rollNo ||
           !marksheetData.physics ||
@@ -47,10 +47,10 @@ export default function MarksheetPost() {
         ) {
           setMessage(response.data.message);
           setError(true);
-        } 
-        else if(marksheetData.studentId){
-            setMessage("Student id already exist")
-            setError(true);
+        } else if (response.data.message ==="studentId id already exist") {
+          console.log("studentId id already exist")
+          setMsg("studentId id already exist");
+          // setError(true);
         }
         // if (response.data.message) {
         //     setMessage(response.data.message);
@@ -106,14 +106,14 @@ export default function MarksheetPost() {
                     type="text"
                     placeholder="Name"
                     className="form-control"
-                    name="name"
-                    id="name"
-                    value={marksheetData.name}
+                    name="Name"
+                    id="Name"
+                    value={marksheetData.Name}
                     onChange={nameFun}
                     required
                   />
                 </div>
-                {error && !marksheetData.name && (
+                {error && !marksheetData.Name && (
                   <div style={{ color: "red" }}>{message}</div>
                 )}
                 <div className="form-group pb-3">

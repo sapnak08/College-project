@@ -18,6 +18,8 @@ import MarksheetEdit from "./Components/Marksheet/MarksheetEdit";
 import StudentEdit from "./Components/Student/StudentEdit";
 import RoleEdit from "./Components/Role/RoleEdit";
 import Login from "./Components/Login";
+import Home1 from "./Components/Home1";
+
 
 function App() {
   return (
@@ -25,6 +27,9 @@ function App() {
     <Navbar/>
     <Routes>
       <Route path="/" element={<Home />}></Route>
+      <Route path="/home" element={<Home1 />}></Route>
+     
+
 
       <Route path="/userpost" element={<UserPost />}></Route>
       <Route path="/userget" element={<UserGet />}></Route>
